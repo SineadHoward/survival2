@@ -8,15 +8,19 @@ public class BZJUmpTrigger : MonoBehaviour
     public AudioSource DoorJumpMusic;
     public GameObject TheZombie;
     public GameObject TheDoor;
+    //private Animation anim;
 
 
 
     void OnTriggerEnter()
     {
+
         GetComponent<BoxCollider>().enabled = false;
         TheDoor.GetComponent<Animation>().Play("JumpDoorAnim");
         DoorBang.Play();
         TheZombie.SetActive(true);
+        //anim = GetComponent<Animation>();
+        //anim = true;
         StartCoroutine(PlayJumpMusic());
     }
 

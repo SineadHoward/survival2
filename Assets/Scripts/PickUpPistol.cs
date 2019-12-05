@@ -22,7 +22,7 @@ public class PickUpPistol : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (TheDistance <= 30)
+        if (TheDistance <= 10)
         {
             ExtraCross.SetActive(true);
             ActionText.GetComponent<Text>().text = "Pick Up Pistol";
@@ -31,7 +31,7 @@ public class PickUpPistol : MonoBehaviour
         }
         if (Input.GetButtonDown("Action"))
         {
-            if (TheDistance <= 22)
+            if (TheDistance <= 6)
             {
                 this.GetComponent<BoxCollider>().enabled = false;
                 ActionDisplay.SetActive(false);
