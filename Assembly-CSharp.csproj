@@ -64,11 +64,13 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\DoorCellOpen.cs" />
     <Compile Include="Assets\Scripts\FirePistol.cs" />
+    <Compile Include="Assets\Scripts\GlobalHealth.cs" />
     <Compile Include="Assets\Scripts\PickUpPistol.cs" />
     <Compile Include="Assets\Scripts\PlayerCasting.cs" />
     <Compile Include="Assets\Scripts\Sequences\AOpening.cs" />
     <Compile Include="Assets\Scripts\Sequences\BFirstTrigger.cs" />
     <Compile Include="Assets\Scripts\Sequences\BZJUmpTrigger.cs" />
+    <Compile Include="Assets\Scripts\ZombieAI.cs" />
     <Compile Include="Assets\Scripts\ZombieDeath.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/sinea/Desktop/survival2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

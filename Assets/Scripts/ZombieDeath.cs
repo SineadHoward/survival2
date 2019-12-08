@@ -8,10 +8,12 @@ public class ZombieDeath : MonoBehaviour
     public int EnemyHealth = 20;
     public GameObject TheEnemy;
     public int StatusCheck;
+    public AudioSource JumpScareMusic;
    
 
     void DamageZombie(int DamageAmount)
     {
+        System.Diagnostics.Debug.WriteLine("damage zombie? ");
         EnemyHealth -= DamageAmount;
     }
 
@@ -22,9 +24,12 @@ public class ZombieDeath : MonoBehaviour
     {
         if (EnemyHealth <= 0 && StatusCheck == 0)
         {
+            this.GetComponent<ZombieAI>().enabled = false;
+            this.GetComponent<BoxCollider>().enabled = false;
             StatusCheck = 2;
             TheEnemy.GetComponent<Animation>().Stop("Z_Walk1_InPlace");
             TheEnemy.GetComponent<Animation>().Play("Z_FallingBack");
+           JumpScareMusic.Stop();
             
         }
     }

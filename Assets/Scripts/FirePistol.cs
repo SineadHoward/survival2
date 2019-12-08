@@ -29,6 +29,7 @@ public class FirePistol : MonoBehaviour
         RaycastHit shot;
         if(Physics.Raycast(transform.position, transform.TransformDirection (Vector3.forward), out shot))
         {
+            System.Diagnostics.Debug.WriteLine("triggered damage function");
             TargetDistance = shot.distance;
             shot.transform.SendMessage("DamageZombie", DamageAmount, SendMessageOptions.DontRequireReceiver);
         }
